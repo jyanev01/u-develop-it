@@ -18,6 +18,7 @@ VALUES
   ('Octavia', 'Butler', 3, 1),
   ('Unica', 'Zurn', NULL, 1);
 
+-- to LEFT join both tables above via party_ID
 SELECT candidates.*, parties.name AS party_name
 FROM candidates
 LEFT JOIN parties ON candidates.party_id = parties.id;
