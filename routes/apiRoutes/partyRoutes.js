@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../../db/connections');
 
 // Get ALL parties
-Router.get('/parties', (req, res) => {
+router.get('/parties', (req, res) => {
     const sql = `SELECT * FROM parties`;
     db.query(sql, (err, rows) => {
         if (err) {
@@ -55,4 +55,4 @@ router.delete('/party/:id', (req, res) => {
     });
 });
 
-
+module.exports = router;

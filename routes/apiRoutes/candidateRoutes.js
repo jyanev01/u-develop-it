@@ -80,7 +80,7 @@ router.post('/candidate', ({ body }, res) => {
     });
 });
 
-// Update a candiate's party
+// Update a candidate's party
 router.put('/candidate/:id', (req, res) => {
     // candidate is allowed to not have party affiliation
     const errors = inputCheck(req.body, 'party_id');
